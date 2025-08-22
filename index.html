@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open When...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a0026; /* Dark Purple Background */
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            color: #d1ff7a; /* Green Text */
+        }
+        h1 {
+            color: #7a42f4; /* Glowing Purple */
+            font-size: 42px;
+            font-weight: 600;
+            text-shadow: 0px 0px 8px #7a42f4;
+        }
+        h2 {
+            color: #a56cff;
+            font-size: 26px;
+            text-shadow: 0px 0px 5px #a56cff;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        .envelope {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto;
+            transition: transform 0.3s;
+        }
+        .envelope:hover {
+            transform: scale(1.1);
+        }
+        .message {
+            display: none;
+            background: #220038; /* Deep Purple */
+            color: #d1ff7a;
+            padding: 20px;
+            margin: 15px auto;
+            border-radius: 10px;
+            width: 85%;
+            max-width: 400px;
+            box-shadow: 0px 0px 15px rgba(122, 66, 244, 0.6);
+            font-size: 20px;
+            position: relative;
+        }
+        .message::before {
+            content: "💚";
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+        }
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #7a42f4;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💜 Open When... 💚</h1>
+
+    <div class="container">
+        <div>
+            <h2>1. Open when you're sad</h2>
+            <button class="envelope" onclick="showMessage('msg1')">
+                <img src="https://i.postimg.cc/VLQ6vPfP/green-heart.gif" width="100" alt="Heart GIF">
+            </button>
+            <div id="msg1" class="message">
+                Momma please don't be sadd! please don't waste your precious tearss theyre worth more than any gem in the worldd! You're the strongest girl I've ever met and I KNOWW that you can overcome the problem which is making you sadd! I love you so so soo much and I always will!!
+            </div>
+        </div>
+
+        <div>
+            <h2>2. Open when you miss me</h2>
+            <button class="envelope" onclick="showMessage('msg2')">
+                <img src="https://i.postimg.cc/VLQ6vPfP/green-heart.gif" width="100" alt="Heart GIF">
+            </button>
+            <div id="msg2" class="message">
+                If you're missing me right now please remember that I WILL ALWAYS MISS YOU MOREE cause mere seconds without you seem difficult cause you are always on my mind and honestly I LOVE ITTT!! 
+            </div>
+        </div>
+
+        <div>
+            <h2>3. Open when you're happy</h2>
+            <button class="envelope" onclick="showMessage('msg3')">
+                <img src="https://i.postimg.cc/VLQ6vPfP/green-heart.gif" width="100" alt="Heart GIF">
+            </button>
+            <div id="msg3" class="message">
+                Aweee I bet you look so damn cute whenever you're happyyy! I'M HAPPY TO KNOW THAT MY PRETTY BABY IS HAPPYY and i hope you always stay happy cause my momma deserves all the love in the UNIVERSEEEEE!!
+            </div>
+        </div>
+
+        <div>
+            <h2>4. Open when you're stressed</h2>
+            <button class="envelope" onclick="showMessage('msg4')">
+                <img src="https://i.postimg.cc/VLQ6vPfP/green-heart.gif" width="100" alt="Heart GIF">
+            </button>
+            <div id="msg4" class="message">
+                Momma you're the strongest girl I've ever met in my entire damn life! No matter what, I'll always believe in you and support you! You can defeat anything that stresses you out cause you're VERY strong and VERY capablee!!
+            </div>
+        </div>
+
+        <div>
+            <h2>5. Open when you're bored</h2>
+            <button class="envelope" onclick="showMessage('msg5')">
+                <img src="https://i.postimg.cc/VLQ6vPfP/green-heart.gif" width="100" alt="Heart GIF">
+            </button>
+            <div id="msg5" class="message">
+                Awee mommaa if you're bored then why aren't you texting meee?? If I'm sleeping then send me your whole FYP fr, I don't mind! I LOVE TALKING TO YOUU AND I LOVE YOU SO MUCHHH!! 
+            </div>
+        </div>
+
+        <div>
+            <h2>6. Open when you feel ugly</h2>
+            <button class="envelope" onclick="showMessage('msg6')">
+                <img src="https://i.postimg.cc/VLQ6vPfP/green-heart.gif" width="100" alt="Heart GIF">
+            </button>
+            <div id="msg6" class="message">
+                BABYYYY IF YOU'RE READING THIS YOU BETTER STOP THINKING SUCH SILLY THINGSS!! YOU ARE THE MOST BEAUTIFUL GIRL IN THE UNIVERSEEE!! You are my MOON, my STARS, my EVERYTHINGG! I wish you could see yourself through my eyes, because then you'd NEVERR feel ugly againn! I LOVE YOUUU!!
+            </div>
+        </div>
+    </div>
+
+    <div class="stars">
+        <div class="star" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+        <div class="star" style="top: 40%; left: 25%; animation-delay: 1s;"></div>
+        <div class="star" style="top: 60%; left: 75%; animation-delay: 2s;"></div>
+        <div class="star" style="top: 30%; left: 90%; animation-delay: 3s;"></div>
+        <div class="star" style="top: 80%; left: 50%; animation-delay: 4s;"></div>
+    </div>
+
+    <script>
+        function showMessage(id) {
+            var message = document.getElementById(id);
+            if (message.style.display === "none" || message.style.display === "") {
+                message.style.display = "block";
+            } else {
+                message.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
